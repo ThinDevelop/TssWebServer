@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/text_bg01"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/black_666666_30_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="รหัสสมาชิก :" />
+
+                <TextView
+                    android:id="@+id/input_customer_id"
+                    style="@style/black_222222_30_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" 
+                android:id="@+id/money_ll">
+
+                <TextView
+                    style="@style/black_666666_30_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/trans_jin_e" />
+
+                <TextView
+                    android:id="@+id/input_amt_tips"
+                    style="@style/red_ff0000_30_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100.00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/black_666666_30_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="@string/trans_cardno" />
+
+                <TextView
+                    android:id="@+id/input_cardno_tips"
+                    style="@style/black_222222_30_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id ="@+id/card_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/pic_sk"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</LinearLayout>

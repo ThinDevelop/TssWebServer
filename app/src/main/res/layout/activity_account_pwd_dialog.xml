@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="580px"
+    android:layout_height="452px"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="580px"
+        android:layout_height="452px"
+        android:background="@drawable/text_bg02"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_account"
+            style="@style/black_666666_30_center"
+            android:layout_width="460px"
+            android:layout_height="82px"
+            android:layout_marginTop="70px"
+            android:background="@drawable/input_user"
+            android:gravity="center_vertical|left"
+            android:hint="@string/please_input_account" />
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/black_666666_30_center"
+            android:layout_width="460px"
+            android:layout_height="82px"
+            android:layout_marginTop="30px"
+            android:background="@drawable/input_password02"
+            android:gravity="center_vertical|left"
+            android:hint="@string/please_input_pwd"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/white_FFFFFF_32_center"
+            android:layout_width="460px"
+            android:layout_height="80px"
+            android:layout_marginTop="40px"
+            android:background="@drawable/trans_confirm_btn"
+            android:gravity="center"
+            android:text="@string/trans_confirm" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tss.webserver">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 1、设置打印机权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PRINTER" />
+    <!-- 2、访问密码键盘权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD" />
+    <!-- 3、密码键盘计算Pinblock权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_PIN_BLOCK" />
+    <!-- 4、密码键盘计算Mac权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_PIN_MAC" />
+    <!-- 5、密码键盘加密数据权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_ENCRYPT_DATA" />
+    <!-- 6、密码键盘更新终端主密钥权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_UPDATE_MKEY" />
+    <!-- 7、密码键盘更新工作密钥权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_UPDATE_WKEY" />
+    <!-- 8、访问接触式IC卡读卡设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_ICCARD" />
+    <!-- 9、访问EMV权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_EMVL2" />
+    <!-- 10、访问非接触IC卡读卡设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_RFCARD" />
+    <!-- 11、访问磁条卡读卡器设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MAGCARD" />
+    <!-- 12、获取磁道明文接口权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MAGCARD_GETTRACKDATA" />
+    <!-- 13、获取磁道密文数据接口权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MAGCARD_GETENCRYPTTRACKDATA" />
+    <!-- 14、访问PSAM卡设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PSAMCARD" />
+    <!-- 15、访问串口设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SERIALPORT" />
+    <!-- 16、访问系统设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEMDEV" />
+    <!-- 17、设置系统时钟权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEMDEV_ALARM" />
+    <!-- 18、访问静默安装权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEMDEV_INSTALL" />
+    <!-- 19、更新终端OS、驱动权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEMDEV_OS_UPDATE" />
+    <!-- 20、ShellMonitor 权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SHELLMONITORDEV" />
+    <!-- 21、home键监听权限 -->
+    <uses-permission android:name="android.permission.LAKALA.ENABLE_HOME" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 屏保权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 获取基站 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- 获取网络状态权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- 拉卡拉授权服务权限声明 -->
+    <uses-permission android:name="com.lakala.cloudpos.authorizor.DATA_ACCESS" />
+
+    <!-- 密码键盘权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_PINPAD_MODULE" />
+    <!-- 刷卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_SWIPE_MODULE" />
+    <!-- POBC权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_PBOC_MODULE" />
+    <!-- 新PBOC权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_NEW_PBOC_MODULE" />
+    <!-- IC卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_IC_MODULE" />
+    <!-- 非接卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_RF_MODULE" />
+    <!-- 打印机权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_PRINTER_MODULE" />
+    <!-- 系统设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_SYSTEM_MODULE" />
+    <!-- 钱箱设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_CASHBOX_MODULE" />
+    <!-- 客显设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_CUSTOMER_DISPLAY_MODULE" />
+    <!-- M1卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_M1_MODULE" />
+    <!-- MODEM设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_MODEM_MODULE" />
+    <!-- PSAM卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_PSAM_MODULE" />
+    <!-- 串口设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_SERIAL_PORT_MODULE" />
+    <!-- 辅屏设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_OLED_MODULE" />
+    <!-- 身份证设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_ID_MODULE" />
+    <!-- LCD设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_LCD_MODULE" />
+    <!-- 安全模块权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_SAFE_MODULE" />
+    <!-- MEM4442卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_MEM4442_MODULE" />
+    <!-- MEM102卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_MEM102_MODULE" />
+    <!-- MEM1608卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_MEM1608_MODULE" />
+    <!-- MEMAT24C02卡设备权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_MEMAT24C02_MODULE" />
+    <!-- 版本获取权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_VERSION_MODULE" />
+    <!-- 语音播报 -->
+    <uses-permission android:name="android.permission.CPAYSDK_VOICE_MODULE" />
+    <!-- 静默安装应用接口权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_SILENT_INSTALL" />
+    <!-- 静默卸载应用接口权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_SILENT_UNINSTALL" />
+    <!-- 扫码权限 -->
+    <uses-permission android:name="android.permission.CPAYSDK_QUICK_SCAN" />
+    <!-- 轮播相关权限新增-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:name="app.TssServerApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.SwipeCardActivity"/>
+    </application>
+
+</manifest>
