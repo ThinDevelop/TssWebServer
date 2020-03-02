@@ -180,65 +180,10 @@ public class TinyWebServer extends Thread {
     public TinyWebServer(final String ip, final int port, CallListener listener) throws IOException {
         InetAddress addr = InetAddress.getByName(ip); ////"172.31.0.186");
 
-//        try {
-//            KeyStore trusted = KeyStore.getInstance(KeyStore.getDefaultType());
-//            KeyManagerFactory kmf = KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
-//
-//            kmf.init(trusted, "passw".toCharArray());
-//            SSLContext sslContext = SSLContext.getInstance("TLSv1.2");               //configure SSL Context to use TLS v1.2
-//            sslContext.init(kmf.getKeyManagers(), null, null);
-//            SSLServerSocketFactory ssf = sslContext.getServerSocketFactory();
-//            serverSocket = (SSLServerSocket) ssf.createServerSocket(port);
-//            serverSocket.setSoTimeout(50000);
-//
-//        } catch (KeyStoreException e) {
-//            e.printStackTrace();
-//        } catch (UnrecoverableKeyException e) {
-//            e.printStackTrace();
-//        } catch (NoSuchAlgorithmException e) {
-//            e.printStackTrace();
-//        } catch (KeyManagementException e) {
-//            e.printStackTrace();
-//        }
-
-
         serverSocket = new ServerSocket(port, 100, addr);
         serverSocket.setSoTimeout(50000);  //set timeout for listner
         callListener = listener;
     }
-
-//    private void doServer() throws Exception {
-//        KeyStore trusted = KeyStore.getInstance("JKS");
-//        InputStream in = TssServerApplication.Companion.getAppContext().getResources().openRawResource(R.raw.keystore); //open inputstream for keystore file in "raw" folder
-//        trusted.load(in, "passw".toCharArray());                                 //load the keystore from file (using password specified when certificate was imported into keystore)
-//        in.close();                                                              //close inputstream
-//        KeyManagerFactory kmf = KeyManagerFactory.getInstance(KeyManagerFactory.getDefaultAlgorithm());
-//        kmf.init(trusted, "passw".toCharArray());
-//        SSLContext sslContext = SSLContext.getInstance("TLSv1.2");               //configure SSL Context to use TLS v1.2
-//        sslContext.init(kmf.getKeyManagers(),null,null);
-//        SSLSocketFactory factory = sslContext.getSocketFactory();
-//    }
-//    private SSLServerSocketFactory getSSLServerSF() throws Exception {
-//
-//        char [] password =
-//                System.getProperty("javax.net.ssl.keyStorePassword").toCharArray();
-//        String keyFilename = System.getProperty("javax.net.ssl.keyStore");
-//
-//        KeyStore ks = KeyStore.getInstance("JKS");
-//        ks.load(new FileInputStream(keyFilename), password);
-//
-//        KeyManagerFactory kmf = KeyManagerFactory.getInstance("NewSunX509");
-//        kmf.init(ks, password);
-//
-//        KeyManager[] kms = kmf.getKeyManagers();
-//        TrustManager[] tms = new MyX509TM[] {new MyX509TM()};
-//
-//        SSLContext ctx = SSLContext.getInstance("TLS");
-//        ctx.init(kms, tms, null);
-//
-//        return ctx.getServerSocketFactory();
-//    }
-
 
     @Override
     public void run() {
